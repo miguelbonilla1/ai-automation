@@ -1,6 +1,6 @@
 # 🤖 AI-Enhanced To-Do List App
 
-A Next.js to-do list application with AI-powered task enhancement, built with Supabase, N8N automation, and deployed on Vercel.
+A Next.js to-do list application with AI-powered task enhancement, built with Supabase, N8N automation, and deployed on Vercel. Updated for production deployment.
 
 ## ✨ Features
 
