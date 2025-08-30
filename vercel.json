@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase_anon_key",
+    "N8N_WEBHOOK_URL": "@n8n_webhook_url",
+    "N8N_BEARER_TOKEN": "@n8n_bearer_token",
+    "TASK_ENHANCE_SECRET": "@task_enhance_secret"
+  }
+}

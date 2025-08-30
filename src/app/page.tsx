@@ -201,13 +201,7 @@ export default async function Home() {
           </button>
         </form>
 
-        {/* Footer Stats */}
-        <div className="bg-red-700 rounded-lg p-4">
-          <div className="flex justify-between items-center text-sm text-white">
-            <span>Pomos: 0/2</span>
-            <span>Finish At: 10:45 (0.9h)</span>
-          </div>
-        </div>
+
       </div>
     </div>
   );
