@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json(data);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 }
@@ -63,7 +63,7 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ error: 'Task ID is required' }, { status: 400 });
     }
 
-    const updateData: any = {};
+    const updateData: { title?: string; completed?: boolean } = {};
     if (title !== undefined) updateData.title = title.trim();
     if (completed !== undefined) updateData.completed = completed;
 
@@ -79,7 +79,7 @@ export async function PATCH(req: NextRequest) {
     }
 
     return NextResponse.json(data);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 }
@@ -102,7 +102,7 @@ export async function DELETE(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
   }
 }
