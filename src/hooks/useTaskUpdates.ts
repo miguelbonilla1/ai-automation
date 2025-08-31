@@ -16,15 +16,15 @@ export function useTaskUpdates({ onTaskEnhanced, tasks }: UseTaskUpdatesProps) {
         if (response.ok) {
           const updatedTasks = await response.json();
           
-          // Check for tasks that have been enhanced
-          updatedTasks.forEach((updatedTask: any) => {
-            const currentTask = tasks.find(task => task.id === updatedTask.id);
-            if (currentTask && 
-                !currentTask.enhanced_title && 
-                updatedTask.enhanced_title) {
-              onTaskEnhanced(updatedTask.id, updatedTask.enhanced_title);
-            }
-          });
+                     // Check for tasks that have been enhanced
+           updatedTasks.forEach((updatedTask: { id: string; enhanced_title: string | null }) => {
+             const currentTask = tasks.find(task => task.id === updatedTask.id);
+             if (currentTask && 
+                 !currentTask.enhanced_title && 
+                 updatedTask.enhanced_title) {
+               onTaskEnhanced(updatedTask.id, updatedTask.enhanced_title);
+             }
+           });
         }
       } catch (error) {
         console.error('Error polling for task updates:', error);
