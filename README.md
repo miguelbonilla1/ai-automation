@@ -187,6 +187,3 @@ todo-ai/
 3. Make your changes
 4. Submit a pull request
 
-## 📄 License
-
-MIT License - feel free to use this project for learning and development!
